@@ -1,0 +1,197 @@
+<template>
+  <section id="activities" class="activities">
+    <div class="container">
+      <div class="section-title">
+        <h2>活动动态</h2>
+        <p>记录我们的技术成长与精彩瞬间，包含技术培训、竞赛参与、校园活动等</p>
+      </div>
+      <div class="activity-filters">
+        <div
+          v-for="btn in filters"
+          :key="btn"
+          class="filter-btn"
+          :class="{ active: activeFilter === btn }"
+          @click="activeFilter = btn"
+        >
+          {{ btn }}
+        </div>
+      </div>
+      <div class="activities-list">
+        <div
+          class="activity-card"
+          v-for="card in filteredCards"
+          :key="card.title"
+        >
+          <div class="activity-img">
+            <img :src="card.img" :alt="card.title" />
+          </div>
+          <div class="activity-info">
+            <span class="activity-date">{{ card.date }}</span>
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.desc }}</p>
+            <a href="#" class="btn">查看详情</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { computed, ref } from 'vue'
+
+type Card = {
+  title: string
+  desc: string
+  date: string
+  img: string
+  category: string
+}
+
+const filters = ['全部活动', '技术培训', '竞赛参与', '校园活动']
+const activeFilter = ref<string>('全部活动')
+
+const cards: Card[] = [
+  {
+    title: '第十四届“新华三杯”全国技术大赛获佳绩',
+    desc: '工作室团队代表学校参加全国总决赛，凭借扎实的网络技术功底和协作能力，荣获全国团队二等奖，为校争光！',
+    date: '2025-05-18',
+    img: 'https://placehold.co/600x360/f8f9fa/165dff?text=%E6%B4%BB%E5%8A%A81',
+    category: '竞赛参与',
+  },
+  {
+    title: '网络安全主题培训讲座',
+    desc: '邀请华为安全技术专家开展讲座，围绕校园网络安全、个人信息保护等内容，为师生提供实用的安全防护技巧。',
+    date: '2025-03-25',
+    img: 'https://placehold.co/600x360/e8f0fe/0e42d2?text=%E6%B4%BB%E5%8A%A82',
+    category: '技术培训',
+  },
+  {
+    title: '新生开学季网络维护志愿服务',
+    desc: '针对新生宿舍网络安装、调试需求，开展为期一周的志愿服务，累计帮助500+新生解决网络问题，获师生好评。',
+    date: '2025-09-10',
+    img: 'https://placehold.co/600x360/f5f5f5/0a2a66?text=%E6%B4%BB%E5%8A%A83',
+    category: '校园活动',
+  },
+]
+
+const filteredCards = computed(() =>
+  activeFilter.value === '全部活动'
+    ? cards
+    : cards.filter((c) => c.category === activeFilter.value)
+)
+</script>
+
+<style scoped>
+.activities {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(245, 233, 255, 0.75) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.activities::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 12% 18%, rgba(255, 111, 97, 0.16), transparent 35%),
+    radial-gradient(circle at 82% 12%, rgba(124, 58, 237, 0.16), transparent 30%);
+  pointer-events: none;
+}
+
+.activity-filters {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 0 8px 10px;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 25px rgba(20, 10, 60, 0.08);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #fff;
+  box-shadow: var(--shadow-card);
+}
+
+.activities-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.activity-card {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.75));
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.activity-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--shadow-soft);
+}
+
+.activity-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.activity-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.activity-card:hover .activity-img img {
+  transform: scale(1.05);
+}
+
+.activity-info {
+  padding: 20px;
+}
+
+.activity-date {
+  font-size: 12px;
+  color: var(--color-muted);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.activity-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.activity-card p {
+  font-size: 14px;
+  color: var(--color-muted);
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .activities-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .activities-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap');
+
+:root {
+  --font-display: 'Space Grotesk', 'Noto Sans SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+  --font-body: 'Noto Sans SC', 'Microsoft YaHei', 'Heiti SC', sans-serif;
+  --color-primary: #4f8bff;
+  --color-secondary: #5f3cf6;
+  --color-accent: #3ee0c4;
+  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-border: rgba(255, 255, 255, 0.24);
+  --color-text: #1e1b2e;
+  --color-muted: #5c5676;
+  --shadow-soft: 0 10px 40px rgba(20, 10, 60, 0.16);
+  --shadow-card: 0 10px 25px rgba(20, 10, 60, 0.12);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: #f3f6ff;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: radial-gradient(circle at 18% 18%, rgba(79, 139, 255, 0.18), transparent 35%),
+    radial-gradient(circle at 78% 4%, rgba(94, 225, 207, 0.16), transparent 28%),
+    linear-gradient(135deg, #eef5ff 0%, #e8ecff 55%, #f0f7ff 100%);
+}
