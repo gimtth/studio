@@ -56,21 +56,21 @@ const cards: Card[] = [
     title: '第十四届“新华三杯”全国技术大赛获佳绩',
     desc: '工作室团队代表学校参加全国总决赛，凭借扎实的网络技术功底和协作能力，荣获全国团队二等奖，为校争光！',
     date: '2025-05-18',
-    img: 'https://placehold.co/600x360/f8f9fa/165dff?text=%E6%B4%BB%E5%8A%A81',
+    img: '/h1.jpg',
     category: '竞赛参与',
   },
   {
-    title: '网络安全主题培训讲座',
-    desc: '邀请华为安全技术专家开展讲座，围绕校园网络安全、个人信息保护等内容，为师生提供实用的安全防护技巧。',
-    date: '2025-03-25',
-    img: 'https://placehold.co/600x360/e8f0fe/0e42d2?text=%E6%B4%BB%E5%8A%A82',
+    title: '新生培训活动',
+    desc: '面向新生开展基础网络配置、账号安全与常用软件培训，帮助大家快速适应校园数字生活。',
+    date: '2025-09-05',
+    img: '/h3.jpg',
     category: '技术培训',
   },
   {
-    title: '新生开学季网络维护志愿服务',
-    desc: '针对新生宿舍网络安装、调试需求，开展为期一周的志愿服务，累计帮助500+新生解决网络问题，获师生好评。',
+    title: '运动会志愿保障',
+    desc: '运动会期间为赛场与直播提供网络保障，协调通信线路、设备调试与应急支持，确保赛事顺畅进行。',
     date: '2025-09-10',
-    img: 'https://placehold.co/600x360/f5f5f5/0a2a66?text=%E6%B4%BB%E5%8A%A83',
+    img: '/h2.JPG',
     category: '校园活动',
   },
 ]
@@ -135,6 +135,9 @@ const filteredCards = computed(() =>
   box-shadow: var(--shadow-card);
   transition: all 0.35s ease;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .activity-card:hover {
@@ -160,6 +163,9 @@ const filteredCards = computed(() =>
 
 .activity-info {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .activity-date {
@@ -181,6 +187,15 @@ const filteredCards = computed(() =>
   color: var(--color-muted);
   margin-bottom: 15px;
   line-height: 1.7;
+}
+
+.activity-card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 16px;
+  margin-top: auto;
 }
 
 @media (max-width: 992px) {

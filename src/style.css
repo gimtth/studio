@@ -15,6 +15,10 @@
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 22px;
+  --cursor-default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%234f8bff' d='M3 2v18l5-6 6 8 2-1.5-6-8H17z'/%3E%3Cpath fill='%23fff' opacity='.9' d='M4 4v12l4-5 5 7 1-.8-5-7H15z'/%3E%3C/svg%3E") 2 2,
+    auto;
+  --cursor-pointer: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff9f3e' d='M4 2v18l5-6 6 8 2-1.5-6-8H18z'/%3E%3Cpath fill='%23fff' opacity='.92' d='M5 4v12l4-5 5 7 1-.8-5-7H16z'/%3E%3C/svg%3E") 2 2,
+    pointer;
 
   font-family: var(--font-body);
   line-height: 1.6;
@@ -35,4 +39,12 @@ body {
   background-image: radial-gradient(circle at 18% 18%, rgba(79, 139, 255, 0.18), transparent 35%),
     radial-gradient(circle at 78% 4%, rgba(94, 225, 207, 0.16), transparent 28%),
     linear-gradient(135deg, #eef5ff 0%, #e8ecff 55%, #f0f7ff 100%);
+  cursor: var(--cursor-default);
+}
+
+a,
+button,
+[role='button'],
+.btn {
+  cursor: var(--cursor-pointer);
 }

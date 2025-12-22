@@ -1,0 +1,408 @@
+
+*压缩解压
+360压缩	WinRAR
+Bandizip	7-Zip & HaoZip
+*游戏工具
+Steam下载管家	迅雷网游加速器
+Golink网游加速器	雷神网游加速器
+*浏览器
+谷歌 & Edge浏览器
+360 & QQ浏览器
+火狐浏览器
+搜狗浏览器
+*即时通讯
+腾讯会议	
+微信（官方+多开版）
+企业微信
+钉钉  & 千牛
+QQ ‍&‍  腾讯TM
+QT语音  & YY语音
+*输入法
+百度 & 迅雷官方版
+百度 & 讯飞输入法
+极品输入法
+Rime输入法
+*下载工具
+百度 & 迅雷官方版
+比特彗星 & Motrix
+闪豆视频下载器
+硕鼠下载器
+qBittorrent
+Free Download Manager
+*媒体播放
+QQ & 酷狗（官方版）
+网易云（官方版）
+网易云（官方版）	Listen1
+QQ影音 & 完美解码
+РotРlayer & QuickTime
+*杀毒软件
+360 & 火绒安全卫士
+腾讯电脑管家
+金山毒霸
+小红伞
+*系统优化
+Wise Care 365
+Glary Utilities
+Advanced SystemCare
+Ashampoo WinOptimizer
+zTasker
+R-Wipe & Clean
+*系统维护
+傲梅分区助手
+dll修复工具
+软媒蓝屏助手
+.net修复工具
+微软运行库
+图吧工具箱
+*驱动修复
+驱动人生（含离线版）
+驱动总裁离线版
+360驱动大师（含离线版）
+驱动精灵（含离线版）
+*卸载工具
+IObitUninstaller
+Uninstall Tool
+Geek Uninstaller
+Wise Force Deletet
+*主题壁纸
+WinDynamicDesktop
+Lively Wallpaper
+AutoDarkModeX
+360桌面助手
+*截图软件
+Snipaste
+PixPin
+Screen to Gif
+FastStone Capture
+*录屏软件
+班迪录屏
+360录屏 
+Movavi Screen Recorder
+Icecream Screen Recorder
+屏幕录像专家
+Mirillis Action 
+oCam
+EVCapture
+*远程控制
+ToDesk & RustDesk
+向日葵
+AnyViewer
+RayLink
+*效率工具
+XYplorer
+Everything
+Stardock Fences
+OneCommander
+❖操作系统
+*常用工具
+微PE工具箱
+VMware
+*操作系统
+Windows11
+Windows10
+Windows7
+CentOS Linux 
+Ubun Linux
+openLylin
+Deepin 
+统信UOS
+*安卓模拟器
+雷电模拟器
+蓝叠模拟器
+❖办公软件
+Office
+WPS
+Project
+Visio
+Xmind
+EdrawMax
+OfficeSuite
+Typora
+Draw.io
+SimpleMind
+Freeplane
+Sketchpad（几何画板）
+手写模拟器
+OCR文字识别
+LocalSend
+Escrcpy
+VueScan
+ToDoList
+❖PDF编辑
+Acrobat DC
+Solid Converter PDF
+PDF Candy	PDFgear 
+PDF-XChange
+PDF24 Creator
+PDF Shape	PDFelement
+Master PDF Editor	UPDF
+❖文献工具
+EndNote
+CAJView
+NoteExpress
+LaTex
+Zotero
+论文潜搜
+ CiteSpace
+Mendeley
+❖翻译软件
+DeepL
+TranSmart
+STranslate 
+pot
+CopyTranslator
+知云文献翻译
+❖AI-工具
+ 
+ DeepSeek
+Stable Diffusion
+OfficeAI
+即创AI & Kimi AI
+Apt Full
+讯飞星火
+AI FaceSwap
+百度AI图片创作助手
+❖图像处理
+Photoshop（PS）
+PS插件库
+Lightroom（LrC）
+illustrator（Ai）
+PS Elements（PS简化版）
+Nik Collection
+InDesign（Id）
+InCopy（Ic）
+ACDSee
+光影魔术手
+QuarkXPress
+Clip Studio Paint
+DxO PhotoLab
+DxO FilmPack
+DxO PureRAW
+DxO ViewPoint
+Topaz Gigapixel Ai
+Topaz Photo Ai
+Topaz DeNoise Al
+Aiarty Image
+Capture One
+SketchBook
+Bridge（Br）
+Corel Painter
+PaintTool SAI
+Krita
+❖媒体动画
+*视频编辑
+Premier（Pr）
+Pr插件库
+After Effects（Ae）
+Ae插件库
+Edius
+威力导演
+Media Encode（Me）	 Topaz Video AI
+Prelude
+Pr Element（Pr简化版）
+Freemake Video Converter	格式工厂
+快剪辑	剪映 &‍ CapCut
+*音频编辑
+Audition（Au）
+Cubase
+Nuendo
+Ableton Live
+Audacity	Mixxx
+*动画制作
+Maya
+Cinema 4D（C4D）
+Octane for C4D
+Arnold（阿诺德）for C4D
+Corona for C4D
+Character Animator（Ch）
+❖AutoCAD
+*CAD软件
+CAD
+CAD精简版
+CAD机械版
+CAD建筑版
+CAD电气版
+CAD MEP
+CAD Plant 3D
+CAD Map 3D
+*国产CAD
+中望CAD
+中望CAD建筑版
+中望CAD机械版
+浩辰CAD
+*CAD工具
+天正软件
+CAD插件库
+CAXA电子图板
+CAXA工艺图表
+CAXA3D实体设计
+CAXA CAM
+❖3D 设计
+3ds Max
+V-ray for 3ds Max
+Corona for 3ds Max
+Arnold（阿诺德）for 3ds Max
+Lumion	Live2D
+SketchUp（草图大师）
+Enscape
+V-Ray for SketchUp
+坯子库 for SketchUp
+Marmoset Toolbag（八猴）
+Substance 3D Designer
+Substance 3D Painter
+Substance 3D Sampler
+Zbrush
+Blender
+ArchiCAD
+ KeyShot
+CorelCAD
+Dimension（Dn）
+Artlantis
+Modo
+SideFX Houdini FX	SimLab Compose
+Cascadeur
+酷家乐
+❖机械设计
+SolidWorks（SW）
+Mastercam
+Rhinoceros（犀牛）
+V-ray for Rhino
+Pro/E
+Creo
+UG NX
+CATIA
+CATIA Composer
+PowerMill
+Inventor
+Solid Edge
+AlphaCAM
+PixyzStudio
+WorkNC
+GibbsCAM
+❖建筑设计
+Revit（BIM）
+Navisworks
+Civil 3D
+Fuzor
+Tekla Structures
+Vectorworks
+❖网页设计
+Dreamweaver（DW）
+Axure
+Animate（An）
+Flash
+Adobe XD
+Fireworks
+❖开发编程
+Visual Basic（VB）
+Visual C++（VC）
+Dev C++
+Java 
+HBuilder X
+PSPAD editor
+Sublime Text
+Notepad++
+DBeaver Ultimate
+R语言 & RStudio
+Anaconda
+Android Studio
+MyEclipse
+eclipse
+Visual Studio
+Visual Studio Code
+Labview
+Python
+Unity 3D
+Keil uVision
+IntelliJ IDEA
+PhpStorm
+WebStorm
+PyCharm
+RubyMine
+goland
+Rider
+CLion
+DataGrip
+Quartus II 
+CIMCO Edit
+Step7
+❖理科工具
+Matlab
+Origin
+Mathematica
+Tableau
+SAS
+Amos
+AxMath
+Mplus
+Minitab
+Lingo
+MathCAD
+FX Draw Tools
+Design Exper
+Maple
+Cytoscape
+EViews
+NCSS 
+SQL Server
+MySQL
+Navicat Premium
+SigmaPlot
+Avantage
+❖仿真模拟
+ANSYS
+ANSYS Electronics
+ANSYS Lumerical
+ANSYS EMA3D
+Abaqus
+Moldflow 
+Adams 	
+Tecplot 360 EX
+Tecplot Focus
+Tecplot RS
+midas Civil
+midas NFX
+midas Gen
+FLAC3D
+DEFORM
+Dynaform
+Altair Hyperwork
+Altair EDEM
+PLAXIS2D	PLAXIS3D
+Ansoft Maxwell	
+JMatPro
+VERICUT 
+Materials Studio
+❖电子电路
+Altium Designer（AD）
+MotorSolve
+Multisim
+Proteus
+Cadence SPB	Altair PSIM
+Advanced Design System
+
+❖行业软件
+EPLAN Electric
+TIA Portal （博途）
+Win CC
+GX Works
+ENVI
+hyperMILL
+Oligo	Marvelous Designer
+Ansys Zemax OpticStudio
+ MDI Jade
+ArcGIS	PCL Geomatica
+Autodesk Mudbox
+Autodesk Vred
+Alias AutoStudio
+Autodesk ArtCAM
+PASS
+Global Mapper
+ABB RobotStudio
+jewelCAD
+Vero Visi	Google Earth
+MedCalc
+Kisssoft
+LabSpec
+Gaussian
+Materialise Mimic	

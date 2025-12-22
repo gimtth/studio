@@ -7,6 +7,26 @@
       </div>
       <div class="about-content solo">
         <div class="org-structure">
+          <div class="group-intro">
+            <div class="intro-item">
+              <h5 class="intro-title">网络运维小组</h5>
+              <p>
+              网络运维是校园信息流动的命脉，而运维工程师则是这命脉的守护者。我们专注于校园网络基础设施的维护与优化，定期召开技术讨论会，直击网络管理的核心挑战。无论是日常的网络维护工作，还是突发的网络故障，我们都能迅速响应、高效处置，全力保障校园网络的畅通无阻。
+              </p>
+            </div>
+            <div class="intro-item">
+              <h5 class="intro-title">网络安全小组</h5>
+              <p>
+              网络安全不仅是守护我们信息安全的前沿阵地，更是一个专注于提升网络安全意识与技能的交流平台。我们的兴趣小组以CTF竞赛、攻防对抗演练、渗透测试等多元形式为载体，深入开展技术研讨与实践探索。在这里，我们共同分享技术心得，在交流碰撞中持续精进能力，共同筑牢网络安全的防线。
+              </p>
+            </div>
+            <div class="intro-item">
+              <h5 class="intro-title">新媒体小组</h5>
+              <p>
+              新媒体是创意与传播的桥梁。从平面设计的斑斓色彩到视频编辑的时光魔法，我们把握PS、摄影与视频制作的精髓，更通过运营微信公众号引领着校园文化的潮流动向。每周的技能培训与创意头脑风暴，总能点燃你的视觉想象，让灵感在指尖流转，最终落地成让人眼前一亮的数字作品。
+              </p>
+            </div>
+          </div>
           <h4>兴趣小组</h4>
           <div class="org-list">
             <button
@@ -17,7 +37,6 @@
               @click="selectGroup(item.id)"
             >
               <h5>{{ item.title }}</h5>
-              <p>{{ item.desc }}</p>
             </button>
           </div>
         </div>
@@ -31,12 +50,30 @@
             <div class="image-block">
               <div class="image-wrapper" @click="openZoom">
                 <img :src="currentSlide.img" :alt="currentGroup.title" />
+                <div class="image-nav" @click.stop>
+                  <button class="nav-btn" @click.stop="prevSlide">‹</button>
+                  <button class="nav-btn" @click.stop="nextSlide">›</button>
+                  <span class="image-indicator">{{ slideIndex + 1 }} / {{ displayCount }}</span>
+                </div>
               </div>
-              <div class="group-actions">
-                <button class="ghost-btn" @click="prevSlide">‹</button>
-                <span class="indicator">{{ slideIndex + 1 }} / {{ displayCount }}</span>
-                <button class="ghost-btn" @click="nextSlide">›</button>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <div class="group-detail" v-if="currentGroup && currentGroup.id === 'security'">
+          <div class="group-detail-text">
+            <div class="image-block">
+              <div class="image-wrapper">
+                <img src="/w3.jpg" alt="新华三杯省赛精彩瞬间" />
               </div>
+            </div>
+            <div class="text-block">
+              <p class="group-tag">网络安全小组</p>
+              <p class="group-desc emphasis">
+                热烈祝贺2025年“新华三杯”全国大学生数字技术省级赛圆满结束，本次大赛由全省38所高校的814名选手参赛。其中升达网络技术工作室共有15名参赛人员，经过激烈比拼，一路闯关。最终，9名同学脱颖而出，斩获亮眼佳绩。
+              </p>
             </div>
           </div>
         </div>
@@ -60,7 +97,7 @@ const groups = [
   {
     id: 'security',
     title: '网络安全小组',
-    desc: 'CTF、攻防演练、渗透测试、安全意识提升',
+    desc: '网络运维是校园信息流动的命脉，而运维工程师则是这命脉的守护者。我们专注于校园网络基础设施的维护与优化，定期召开技术讨论会，直击网络管理的核心挑战。无论是日常的网络维护工作，还是突发的网络故障，我们都能迅速响应、高效处置，全力保障校园网络的畅通无阻。',
     detail:
       '2025年第十四届“新华三杯”全国大学生数字技术省复赛圆满结束，升达网络技术工作室共有32名参赛成员，27名进入复赛，经过激烈角逐，最终12人脱颖而出，斩获佳绩！',
     slides: [
@@ -75,14 +112,14 @@ const groups = [
   {
     id: 'network',
     title: '网络运维小组',
-    desc: '校园网络维护与优化、应急保障、技术讨论',
+    desc: '网络安全不仅是守护我们信息安全的前沿阵地，更是一个专注于提升网络安全意识与技能的交流平台。我们的兴趣小组以CTF竞赛、攻防对抗演练、渗透测试等多元形式为载体，深入开展技术研讨与实践探索。在这里，我们共同分享技术心得，在交流碰撞中持续精进能力，共同筑牢网络安全的防线。',
     detail: '（敬请期待更多活动内容）',
     slides: [],
   },
   {
     id: 'media',
     title: '新媒体小组',
-    desc: '平面设计、摄影视频、公众号运营与活动宣传',
+    desc: '新媒体是创意与传播的桥梁。从平面设计的斑斓色彩到视频编辑的时光魔法，我们把握PS、摄影与视频制作的精髓，更通过运营微信公众号引领着校园文化的潮流动向。每周的技能培训与创意头脑风暴，总能点燃你的视觉想象，让灵感在指尖流转，最终落地成让人眼前一亮的数字作品。',
     detail: '（敬请期待更多活动内容）',
     slides: [],
   },
@@ -132,6 +169,92 @@ watch([selectedId, slideIndex], () => {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(246, 233, 255, 0.75) 100%);
 }
 
+.about .section-title {
+  margin-bottom: 16px;
+  padding-top: 8px;
+}
+
+.group-intro {
+  margin-bottom: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.intro-item {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(79, 139, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.intro-title {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  background: linear-gradient(120deg, #4f8bff, #7c5bff 60%, #ff7ad6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  padding-right: 6px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.intro-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(120deg, #4f8bff, #ff7ad6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.intro-item:hover .intro-title {
+  transform: translateY(-1px);
+}
+
+.intro-item:hover .intro-title::after {
+  transform: scaleX(1);
+}
+
+.intro-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(79, 139, 255, 0.12), rgba(255, 122, 214, 0.12));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.intro-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  border-color: rgba(79, 139, 255, 0.35);
+}
+
+.intro-item:hover::before {
+  opacity: 1;
+}
+
+.intro-item p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--color-muted);
+  text-indent: 2em;
+}
+
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -140,7 +263,7 @@ watch([selectedId, slideIndex], () => {
 }
 
 .org-structure {
-  margin-top: 30px;
+  margin-top: 12px;
   width: 100%;
 }
 
@@ -153,21 +276,27 @@ watch([selectedId, slideIndex], () => {
 
 .org-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
   width: 100%;
-  justify-items: stretch;
+  justify-items: center;
+  align-items: stretch;
 }
 
 .org-item {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  padding: 18px 22px;
+  padding: 14px 16px 12px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
   position: relative;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  max-width: 260px;
 }
 
 .org-item.active {
@@ -197,7 +326,7 @@ watch([selectedId, slideIndex], () => {
 .org-item h5 {
   font-size: 16px;
   color: var(--color-text);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   font-weight: 700;
 }
 
@@ -205,7 +334,7 @@ watch([selectedId, slideIndex], () => {
   font-size: 14px;
   color: var(--color-muted);
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .group-detail {
@@ -239,10 +368,18 @@ watch([selectedId, slideIndex], () => {
   opacity: 1;
 }
 
+.group-detail + .group-detail {
+  margin-top: 16px;
+}
+
 .group-detail-text {
   display: flex;
   align-items: flex-start;
   gap: 18px;
+}
+
+.group-detail-text.reverse {
+  flex-direction: row-reverse;
 }
 
 .text-block {
@@ -306,6 +443,56 @@ watch([selectedId, slideIndex], () => {
   width: 100%;
   position: relative;
   cursor: zoom-in;
+}
+
+.image-nav {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.image-wrapper:hover .image-nav {
+  opacity: 1;
+}
+
+.nav-btn {
+  pointer-events: auto;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  font-size: 18px;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav-btn:hover {
+  background: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.image-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
 }
 
 .image-block img {

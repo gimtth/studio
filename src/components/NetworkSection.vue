@@ -20,45 +20,15 @@
           <div class="contact-qrcode">
             <h4>公众号报修/资讯</h4>
             <div class="qrcode-img">
-              <img src="https://placehold.co/150x150/ffffff/165dff?text=QR" alt="升达网络技术工作室公众号" />
+              <img src="/wxgzh.jpg" alt="升达网络技术工作室公众号" />
             </div>
             <p class="qrcode-tips">扫码关注，提交报修或查看使用指南</p>
           </div>
         </div>
         <div class="contact-map">
-          <h3>问题反馈</h3>
-          <p>填写你的网络/设备问题或建议，我们会尽快跟进。</p>
-          <form @submit.prevent="submitFeedback">
-            <div class="form-group">
-              <label for="issueType">问题类型</label>
-              <select id="issueType" class="form-control" v-model="feedback.issueType">
-                <option>宿舍网络</option>
-                <option>校园WiFi</option>
-                <option>账号/认证</option>
-                <option>打印设备</option>
-                <option>其他</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="issueDesc">问题描述</label>
-              <textarea
-                id="issueDesc"
-                class="form-control"
-                v-model="feedback.issueDesc"
-                placeholder="请描述问题现象、宿舍楼栋/房间、时间等信息"
-              ></textarea>
-            </div>
-            <div class="form-group">
-              <label for="contactInfo">联系方式</label>
-              <input
-                id="contactInfo"
-                class="form-control"
-                v-model="feedback.contactInfo"
-                placeholder="手机或QQ，便于联系"
-              />
-            </div>
-            <button type="submit" class="btn full-btn">提交反馈</button>
-          </form>
+          <h3>升达校园网助手</h3>
+          <p>直接对话提问网络相关问题，获取即时指导和报修指引。</p>
+          <p class="assistant-tip">暂未开放</p>
         </div>
       </div>
     </div>
@@ -66,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { computed } from 'vue'
 
 const contactInfos = [
   { icon: 'fas fa-phone', title: '联系电话', desc: '校园网报修电话：0371-85911009' },
@@ -74,18 +44,17 @@ const contactInfos = [
   { icon: 'fas fa-wifi', title: '线上报修', desc: '关注“升达网络技术工作室”公众号，进入报修入口。' },
 ]
 
-const feedback = reactive({
-  issueType: '宿舍网络',
-  issueDesc: '',
-  contactInfo: '',
-})
-
-const submitFeedback = () => {
-  alert('反馈已提交，我们将尽快跟进！')
-  feedback.issueType = '宿舍网络'
-  feedback.issueDesc = ''
-  feedback.contactInfo = ''
+const assistantConfig = {
+  accessKeyId: 'HIAKZDU0a29ydGVvcEg5anBJVHBkS1FLNmFjNzJ2YTI3amc',
+  accessKeySecret: '3w1/d/cQlBgXJwox3UHB1mE2OLpKMtEM/0cGBgJ/AADOeggAQADZAW0ajA==',
 }
+
+// TODO: 将嵌入地址替换为实际 hiagent 对话嵌入 URL，并推荐改为环境变量以避免明文暴露
+const assistantEmbedUrl = computed(() => {
+  const id = encodeURIComponent(assistantConfig.accessKeyId)
+  const secret = encodeURIComponent(assistantConfig.accessKeySecret)
+  return `https://hiagent.example.com/embed?accessKeyId=${id}&accessKeySecret=${secret}`
+})
 </script>
 
 <style scoped>

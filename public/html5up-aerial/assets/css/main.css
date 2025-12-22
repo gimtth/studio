@@ -55,6 +55,55 @@ body {
 	-webkit-text-size-adjust: none;
 }
 
+/* Custom cursor to align with main site */
+body {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%234f8bff' d='M3 2v18l5-6 6 8 2-1.5-6-8H17z'/%3E%3Cpath fill='%23fff' opacity='.9' d='M4 4v12l4-5 5 7 1-.8-5-7H15z'/%3E%3C/svg%3E") 2 2, auto;
+}
+
+a,
+button,
+[role='button'] {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff9f3e' d='M4 2v18l5-6 6 8 2-1.5-6-8H18z'/%3E%3Cpath fill='%23fff' opacity='.92' d='M5 4v12l4-5 5 7 1-.8-5-7H16z'/%3E%3C/svg%3E") 2 2, pointer;
+}
+
+/* Ensure overlays / wrappers inherit the custom cursor */
+html,
+body,
+#wrapper,
+.content,
+.inner,
+.overlay,
+.bg,
+.main,
+.actions,
+.actions li,
+.actions a,
+.icons,
+.icons li,
+.icons li a {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%234f8bff' d='M3 2v18l5-6 6 8 2-1.5-6-8H17z'/%3E%3Cpath fill='%23fff' opacity='.9' d='M4 4v12l4-5 5 7 1-.8-5-7H15z'/%3E%3C/svg%3E") 2 2, auto !important;
+}
+
+.actions a,
+a.button,
+button {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff9f3e' d='M4 2v18l5-6 6 8 2-1.5-6-8H18z'/%3E%3Cpath fill='%23fff' opacity='.92' d='M5 4v12l4-5 5 7 1-.8-5-7H16z'/%3E%3C/svg%3E") 2 2, pointer !important;
+}
+
+/* Override sections that set their own cursor to default */
+#header,
+#header *,
+#footer,
+#footer *,
+#bg,
+#bg:before,
+#bg:after,
+body.is-preload *,
+body.is-preload *::before,
+body.is-preload *::after {
+	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%234f8bff' d='M3 2v18l5-6 6 8 2-1.5-6-8H17z'/%3E%3Cpath fill='%23fff' opacity='.9' d='M4 4v12l4-5 5 7 1-.8-5-7H15z'/%3E%3C/svg%3E") 2 2, auto !important;
+}
+
 mark {
 	background-color: transparent;
 	color: inherit;
